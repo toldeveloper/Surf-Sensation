@@ -1,0 +1,141 @@
+/* Color palette
+----------------------
+Light green: 0f7173
+Dark blue: 2e294e
+Powerful red: db2955 
+Lighter blue: 2a2a72
+Sand: f2e3bc
+*/
+
+
+.page-body{
+    max-width: 960px;
+    margin: auto; /* centrerer sitet*/
+}
+
+
+/* Header ----------------------------------- */
+
+
+.header{
+    position: relative; /* burde være nødvendig for at position mit logo i billedet med "absolute", samt navbar */
+}
+
+.beach{
+    /* position: relative; */
+    width: 100%;
+}
+
+.logo{
+    background-color: #2e294e;
+    color: #f2e3bc;
+    position: absolute;
+    bottom: 0px; /* vigtigt at navbar og logo bruger samme type position (her "bottom"), ellers fuckes alt op ved responsive */
+    z-index: 100;
+    left: 50%; /* centrerer det ikke helt */
+    transform: translate(-50%, -50%); /*centrerer det, somehow */
+    padding: 2rem;
+}
+
+
+/* Navbar ------------------------------------ */
+
+.navbar{
+    position: absolute;
+    z-index: 100;
+    bottom: -45px;
+    background-color: #f2e3bc;
+    left: 50%; /* centrerer det ikke helt */
+    transform: translate(-50%, -50%); /*centrerer det, somehow, men flytter også lidt vertikalt, for some reason */
+    min-width: 22rem;
+}
+
+li {
+    /* display: inline; horizontal items */
+    float: left;
+}
+
+li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1rem; /*gør sandfarvet navbarfirkanten lidt større, samt hover felt større*/
+}
+
+li a:hover {
+    color: red;
+}
+
+ul {
+    display: flex;
+    flex-direction: row; /*mistænker ligegyldig*/
+    justify-content: space-between;
+    list-style-type: none; /* Fjern bulletpoints */
+    margin: 0;
+    padding: 0;
+    }
+
+
+
+/* Main ---------------------------------------------- */
+
+.front-paragraph{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;    
+    font: 1.156em/1.3 My Gill Sans, Lato, sans-serif;
+    font-size-adjust: 0.45;
+}
+
+.surfers{
+    width: 50%;
+    display: block; /* margin virker ikke uden denne */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer / SoMe sektion---------------------------------------- */
+
+footer{
+    background-color: #f2e3bc;
+}
+
+.some-image {
+    width: 32px;
+    margin-right: 16px;
+    margin-top: 1px;
+    padding-bottom: 2rem;
+}
+
+.some-icons{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+h4{ /*kan ikke få det til at virke med ID. ingen af mine ID'er har virket.. */
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+  
+/* 
+  Hvis sticky, så brug det ud fra dette parent element
+  .header{
+    position: -webkit-sticky; /* Safari 
+    position: sticky;
+    top: 0;
+  } 
+  */
